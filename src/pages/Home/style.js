@@ -99,8 +99,8 @@ export const ContainerProduct = styled.div`
 export const Product = styled.div`
   width: 400px;
   height: 400px;
-  background-color: #f5f5f5;
-  box-shadow: 0px 0px 10px #fff;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px #ccc;
   border-radius: 10px;
 
   display: flex;
@@ -112,5 +112,56 @@ export const Product = styled.div`
   > img {
     width: 300px;
     height: 300px;
+  }
+`;
+
+export const SectionAdoption = styled.section`
+  background-color: ${({ theme }) => theme.COLORS.BG_SECONDARY};
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 20px;
+  > img {
+    flex: 1;
+  }
+  > div {
+    text-align: center;
+    align-self: center;
+    max-width: 750px;
+    > p {
+      margin-top: 30px;
+      text-align: justify;
+    }
+    > h1 {
+      margin-top: 30px;
+    }
+  }
+  flex: 1;
+`;
+
+export const ContainerAdoption = styled.div`
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+`;
+
+export const AdoptionBox = styled.div`
+  background-color: ${({ theme }) => theme.COLORS.FT_WHITE};
+  padding: 20px;
+  border-radius: 20px;
+
+  > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    > img {
+      height: 300px;
+      width: 300px;
+    }
+    > span {
+      margin-top: 30px;
+    }
   }
 `;

@@ -4,6 +4,9 @@ import {
   SectionProduct,
   ContainerProduct,
   Product,
+  SectionAdoption,
+  ContainerAdoption,
+  AdoptionBox,
 } from "./style";
 import { Button } from "../../Components/Button";
 
@@ -14,7 +17,10 @@ import { API } from "../../API/api";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { HeaderMain } from "../../Components/HeaderMain";
 
-import cat from "../../assets/img/catinbox.png";
+import catBox from "../../assets/img/catstanding.png";
+import cat from "../../assets/img/gatoReal.png";
+import dogReal from "../../assets/img/cachorroReal.png";
+import dog from "../../assets/img/dog.png";
 
 export function Home() {
   const api = API;
@@ -25,7 +31,7 @@ export function Home() {
 
       <Container>
         <ContainerInfo>
-          <img src={cat} alt="" />
+          <img src={catBox} alt="" />
 
           <div>
             <h1>Quem somos ?</h1>
@@ -58,8 +64,9 @@ export function Home() {
                   return (
                     <Product>
                       <h2>{item.name}</h2>
-                      <span>{item.price}</span>
                       <img src={item.product} alt={item.name} />
+
+                      <span>{item.price}</span>
                     </Product>
                   );
                 }
@@ -67,6 +74,35 @@ export function Home() {
             </Link>
           </ContainerProduct>
         </SectionProduct>
+
+        <SectionAdoption>
+          <img src={dog} alt="" />
+
+          <div>
+            <h1>Quer adotar um gato ou cachorro ?</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laboriosam quam atque excepturi voluptate nisi ipsam iste, amet,
+              incidunt id nihil perferendis deserunt sequi, provident hic odit
+              repellat corrupti fugiat voluptatem.
+            </p>
+
+            <ContainerAdoption>
+              <AdoptionBox>
+                <Link>
+                  <img src={cat} alt="" />
+                  <span>Gato</span>
+                </Link>
+              </AdoptionBox>
+              <AdoptionBox>
+                <Link>
+                  <img src={dogReal} alt="" />
+                  <span>Cachorro</span>
+                </Link>
+              </AdoptionBox>
+            </ContainerAdoption>
+          </div>
+        </SectionAdoption>
       </Container>
     </>
   );
