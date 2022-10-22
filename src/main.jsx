@@ -7,6 +7,7 @@ import { SingUp } from "./pages/SingUp";
 import { SingIn } from "./pages/SingIn";
 
 import { Home } from "./pages/Home";
+import { Adoption } from "./pages/Adoption/";
 
 import { ThemeProvider } from "styled-components";
 import Colors from "./Styles/theme";
@@ -22,6 +23,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Routes>
           <Route path="/register" element={<SingUp />} />
           <Route path="/login" element={<SingIn />} />
+          <Route path="/adocao" element={<Adoption />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>
